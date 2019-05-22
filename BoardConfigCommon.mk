@@ -17,7 +17,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 # inherit from common msm8226
 -include device/samsung/msm8226-common/BoardConfigCommon.mk
 
-LOCAL_PATH := device/samsung/matisse-common
+LOCAL_PATH := device/samsung/millet-common
 
 # Use Snapdragon LLVM if available on build server
 #TARGET_USE_SDCLANG := true
@@ -36,8 +36,8 @@ TARGET_KERNEL_SELINUX_LOG_CONFIG := selinux_log_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-linux-androideabi-
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_matisse
-#TARGET_RECOVERY_DEVICE_MODULES := libinit_matisse
+TARGET_INIT_VENDOR_LIB := libinit_millet
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_millet
 TARGET_UNIFIED_DEVICE := true
 
 # Display
@@ -67,7 +67,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 #TARGET_POWERHAL_VARIANT := qcom
 
 # Recovery
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/matisse-common/recovery/recovery_keys.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/millet-common/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
