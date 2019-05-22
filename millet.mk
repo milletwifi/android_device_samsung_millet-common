@@ -96,7 +96,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/Synaptics_HID_TouchPad.idc:$(TARGET_OUT_ETC)/system/usr/idc/Synaptics_HID_TouchPad.idc \
     $(LOCAL_PATH)/idc/Synaptics_RMI4_TouchPad_Sensor.idc:$(TARGET_OUT_ETC)/system/usr/idc/Synaptics_RMI4_TouchPad_Sensor.idc
 
-# matisse Permissions 
+# millet Permissions 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.ethernet.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.ethernet.xml \
