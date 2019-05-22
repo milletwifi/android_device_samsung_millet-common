@@ -37,52 +37,51 @@ void init_target_properties(void)
 
     std::string bootloader = property_get("ro.bootloader");
 
-    if (bootloader.find("T530NU") == 0) {
-        /* matissewifiue */
-        property_set("ro.build.fingerprint", "samsung/matissewifiue/matissewifi:5.0.2/LRX22G/T530NUU1BOJ4:user/release-keys");
-        property_set("ro.build.description", "matissewifiue-user 5.0.2 LRX22G T530NUU1BOJ4 release-keys");
-        property_set("ro.product.product", "matissewifi");
-        property_set("ro.product.device", "matissewifi");
-        property_set("ro.product.model", "SM-T530NU");
+    if (bootloader.find("T330NU") == 0) {
+		property_set("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
+		property_set("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOD8 release-keys");
+        property_set("ro.product.product", "milletwifi");
+        property_set("ro.product.device", "milletwifi");
+        property_set("ro.product.model", "SM-T330NU");
         property_set("ro.carrier", "wifi-only");
         property_set("ro.radio.noril", "1");
     }
-    else if (bootloader.find("T530XX") == 0) {
-        /* matissewifixx */
-        property_set("ro.build.fingerprint", "samsung/matissewifixx/matissewifi:5.0.2/LRX22G/T530XXU1BOJ4:user/release-keys");
-        property_set("ro.build.description", "matissewifixx-user 5.0.2 LRX22G T530XXU1BOJ4 release-keys");
-        property_set("ro.product.model", "SM-T530");
-        property_set("ro.product.name", "matissewifi");
-        property_set("ro.product.device", "matissewifi");
+    else if (bootloader.find("T330XX") == 0) {
+        /* milletwifixx */
+        property_set("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T330XXU1BOJ4:user/release-keys");
+        property_set("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOJ4 release-keys");
+        property_set("ro.product.model", "SM-T330");
+        property_set("ro.product.name", "milletwifi");
+        property_set("ro.product.device", "milletwifi");
         property_set("ro.carrier", "wifi-only");
         property_set("ro.radio.noril", "1");
     }
-    else if (bootloader.find("T531XX") == 0) {
-        /* matisse3gxx */
-        property_set("ro.build.fingerprint", "samsung/matisse3gxx/matisse3g:5.0.2/LRX22G/T531XXU1BOE6:user/release-keys");
-        property_set("ro.build.description", "matisse3gxx-user 5.0.2 LRX22G T531XXU1BOE6 release-keys");
-        property_set("ro.product.model", "SM-T531");
-        property_set("ro.product.name", "matisse3g");
-        property_set("ro.product.device", "matisse3g");
+    else if (bootloader.find("T331XX") == 0) {
+        /* millet3gxx */
+		property_set("ro.build.fingerprint", "samsung/millet3gxx/millet3g:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
+		property_set("ro.build.description", "millet3gxx-user 5.0.2 LRX22G T331XXU1BOD8 release-keys");
+        property_set("ro.product.model", "SM-T331");
+        property_set("ro.product.name", "millet3g");
+        property_set("ro.product.device", "millet3g");
         property_set("telephony.lteOnCdmaDevice", "0");
         property_set("telephony.lteOnGsmDevice", "0");
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
     }
-    else if (bootloader.find("T535XX") == 0) {
-        /* matisseltexx */
-        property_set("ro.build.fingerprint", "samsung/matisseltexx/matisselte:5.0.2/LRX22G/T535XXU1BOL1:user/release-keys");
-        property_set("ro.build.description", "matisseltexx-user 5.0.2 LRX22G T535XXU1BOL1 release-keys");
-        property_set("ro.product.model", "SM-T535");
-        property_set("ro.product.name", "matisselte");
-        property_set("ro.product.device", "matisselte");
+    else if (bootloader.find("T335XX") == 0) {
+        /* milletltexx */
+		property_set("ro.build.fingerprint", "samsung/milletltexx/milletlte:5.0.2/LRX22G/T335XXU1BOD8:user/release-keys");
+		property_set("ro.build.description", "milletltexx-user 5.0.2 LRX22G T335XXU1BOD8 release-keys");
+        property_set("ro.product.model", "SM-T335");
+        property_set("ro.product.name", "milletlte");
+        property_set("ro.product.device", "milletlte");
         property_set("telephony.lteOnGsmDevice", "1");
         property_set("ro.telephony.default_network", "10");
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
     } else {
-        /* matissewifi */
-        property_set("ro.product.model", "SM-T5XX");
-        property_set("ro.product.name", "matissexx");
-        property_set("ro.product.device", "matisse");
+        /* milletwifi */
+        property_set("ro.product.model", "SM-T3XX");
+        property_set("ro.product.name", "milletxx");
+        property_set("ro.product.device", "millet");
         property_set("ro.carrier", "wifi-only");
         property_set("ro.radio.noril", "1");
     }
