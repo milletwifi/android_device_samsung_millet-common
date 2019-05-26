@@ -17,7 +17,7 @@
 # inherit from common msm8226
 -include device/samsung/msm8226-common/msm8226.mk
 
-LOCAL_PATH := device/samsung/matisse-common
+LOCAL_PATH := device/samsung/millet-common
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
@@ -145,4 +145,4 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/samsung/matisse-common/matisse-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/millet-common/millet-common-vendor.mk)
