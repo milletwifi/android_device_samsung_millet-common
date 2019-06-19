@@ -7,6 +7,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
+
 #include "log.h"
 #include "property_service.h"
 #include "util.h"
@@ -32,6 +35,17 @@ static const GRFont* get_font()
     return gr_font;
 }
 
+void property_override(char const prop[], char const value[])
+{
+    prop_info *pi;
+
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
 void init_target_properties(void)
 {
 
@@ -42,7 +56,7 @@ void init_target_properties(void)
 		property_set("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOD8 release-keys");
         property_set("ro.product.product", "milletwifi");
         property_set("ro.product.device", "milletwifi");
-        property_set("ro.product.model", "SM-T330NU");
+        property_override("ro.product.model", "SM-T330NU");
         property_set("ro.carrier", "wifi-only");
         property_set("ro.radio.noril", "1");
     }
@@ -50,7 +64,7 @@ void init_target_properties(void)
         /* milletwifixx */
         property_set("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T330XXU1BOJ4:user/release-keys");
         property_set("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOJ4 release-keys");
-        property_set("ro.product.model", "SM-T330");
+        property_override("ro.product.model", "SM-T330");
         property_set("ro.product.name", "milletwifi");
         property_set("ro.product.device", "milletwifi");
         property_set("ro.carrier", "wifi-only");
@@ -71,7 +85,7 @@ void init_target_properties(void)
         /* milletltexx */
 		property_set("ro.build.fingerprint", "samsung/milletltexx/milletlte:5.0.2/LRX22G/T335XXU1BOD8:user/release-keys");
 		property_set("ro.build.description", "milletltexx-user 5.0.2 LRX22G T335XXU1BOD8 release-keys");
-        property_set("ro.product.model", "SM-T335");
+        property_override("ro.product.model", "SM-T335");
         property_set("ro.product.name", "milletlte");
         property_set("ro.product.device", "milletlte");
         property_set("telephony.lteOnGsmDevice", "1");
@@ -79,7 +93,7 @@ void init_target_properties(void)
         property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
     } else {
         /* milletwifi */
-        property_set("ro.product.model", "SM-T3XX");
+        property_override("ro.product.model", "SM-T3XX");
         property_set("ro.product.name", "milletxx");
         property_set("ro.product.device", "millet");
         property_set("ro.carrier", "wifi-only");
