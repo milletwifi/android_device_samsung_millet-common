@@ -52,52 +52,66 @@ void init_target_properties(void)
     std::string bootloader = property_get("ro.bootloader");
 
     if (bootloader.find("T330NU") == 0) {
-		property_set("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
-		property_set("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOD8 release-keys");
-        property_set("ro.product.product", "milletwifi");
-        property_set("ro.product.device", "milletwifi");
+		property_override("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
+		property_override("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOD8 release-keys");
+        property_override("ro.product.product", "milletwifi");
+        property_override("ro.product.device", "milletwifi");
         property_override("ro.product.model", "SM-T330NU");
-        property_set("ro.carrier", "wifi-only");
-        property_set("ro.radio.noril", "1");
+        property_override("ro.carrier", "wifi-only");
+        property_override("ro.radio.noril", "1");
     }
     else if (bootloader.find("T330XX") == 0) {
         /* milletwifixx */
-        property_set("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T330XXU1BOJ4:user/release-keys");
-        property_set("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOJ4 release-keys");
+        property_override("ro.build.fingerprint", "samsung/milletwifixx/milletwifi:5.0.2/LRX22G/T330XXU1BOJ4:user/release-keys");
+        property_override("ro.build.description", "milletwifixx-user 5.0.2 LRX22G T330XXU1BOJ4 release-keys");
         property_override("ro.product.model", "SM-T330");
-        property_set("ro.product.name", "milletwifi");
-        property_set("ro.product.device", "milletwifi");
-        property_set("ro.carrier", "wifi-only");
-        property_set("ro.radio.noril", "1");
+        property_override("ro.product.name", "milletwifi");
+        property_override("ro.product.device", "milletwifi");
+        property_override("ro.carrier", "wifi-only");
+        property_override("ro.radio.noril", "1");
     }
     else if (bootloader.find("T331XX") == 0) {
         /* millet3gxx */
-		property_set("ro.build.fingerprint", "samsung/millet3gxx/millet3g:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
-		property_set("ro.build.description", "millet3gxx-user 5.0.2 LRX22G T331XXU1BOD8 release-keys");
-        property_set("ro.product.model", "SM-T331");
-        property_set("ro.product.name", "millet3g");
-        property_set("ro.product.device", "millet3g");
-        property_set("telephony.lteOnCdmaDevice", "0");
-        property_set("telephony.lteOnGsmDevice", "0");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
+		property_override("ro.build.fingerprint", "samsung/millet3gxx/millet3g:5.0.2/LRX22G/T331XXU1BOD8:user/release-keys");
+		property_override("ro.build.description", "millet3gxx-user 5.0.2 LRX22G T331XXU1BOD8 release-keys");
+        property_override("ro.product.model", "SM-T331");
+        property_override("ro.product.name", "millet3g");
+        property_override("ro.product.device", "millet3g");
+        property_override("telephony.lteOnCdmaDevice", "0");
+        property_override("telephony.lteOnGsmDevice", "0");
+        property_override("ro.telephony.ril_class", "SamsungMSM8226RIL");
     }
     else if (bootloader.find("T335XX") == 0) {
         /* milletltexx */
-		property_set("ro.build.fingerprint", "samsung/milletltexx/milletlte:5.0.2/LRX22G/T335XXU1BOD8:user/release-keys");
-		property_set("ro.build.description", "milletltexx-user 5.0.2 LRX22G T335XXU1BOD8 release-keys");
+		property_override("ro.build.fingerprint", "samsung/milletltexx/milletlte:5.0.2/LRX22G/T335XXU1BOD8:user/release-keys");
+		property_override("ro.build.description", "milletltexx-user 5.0.2 LRX22G T335XXU1BOD8 release-keys");
         property_override("ro.product.model", "SM-T335");
-        property_set("ro.product.name", "milletlte");
-        property_set("ro.product.device", "milletlte");
-        property_set("telephony.lteOnGsmDevice", "1");
-        property_set("ro.telephony.default_network", "10");
-        property_set("ro.telephony.ril_class", "SamsungMSM8226RIL");
+        property_override("ro.product.name", "milletlte");
+        property_override("ro.product.device", "milletlte");
+        property_override("telephony.lteOnGsmDevice", "1");
+        property_override("ro.telephony.default_network", "10");
+        property_override("ro.telephony.ril_class", "SamsungMSM8226RIL");
+    } else if (bootloader.find("T337T") == 0) {
+        /* milletltexx */
+		property_override("ro.build.fingerprint", "samsung/milletltetmo/milletltetmo:5.1.1/LMY47X/T337TUVS1CPL1:user/release-keys");
+		property_override("ro.build.description", "milletltetmo-user 5.1.1 LMY47X T337TUVS1CPL1 release-keys");
+        property_override("ro.product.model", "SM-T337T");
+        property_override("ro.product.name", "milletltetmo");
+        property_override("ro.product.device", "milletltetmo");
+        property_override("telephony.lteOnGsmDevice", "1");
+        property_override("ro.telephony.default_network", "9");
+        property_override("ro.telephony.ril_class", "SamsungMSM8226RIL");
+		property_override("rild.libpath", "/system/lib/libsec-ril.so");
+		property_override("ril.subscription.types", "NV,RUIM");
+		property_override("ro.telephony.ril_class", "-d /dev/smd0");
+		property_override("DEVICE_PROVISIONED", "1");
     } else {
         /* milletwifi */
         property_override("ro.product.model", "SM-T3XX");
-        property_set("ro.product.name", "milletxx");
-        property_set("ro.product.device", "millet");
-        property_set("ro.carrier", "wifi-only");
-        property_set("ro.radio.noril", "1");
+        property_override("ro.product.name", "milletxx");
+        property_override("ro.product.device", "millet");
+        property_override("ro.carrier", "wifi-only");
+        property_override("ro.radio.noril", "1");
     }
 
     std::string device = property_get("ro.product.device");
