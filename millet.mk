@@ -50,7 +50,7 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=160
+    ro.sf.lcd_density=213
 
 # Graphics
 PRODUCT_AAPT_CONFIG := xlarge
