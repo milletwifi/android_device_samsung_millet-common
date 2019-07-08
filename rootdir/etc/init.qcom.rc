@@ -571,6 +571,9 @@ on boot
     chmod 0664 /sys/class/power_supply/battery/batt_temp_table
     chown system radio /sys/class/power_supply/battery/batt_temp_table
 
+    # Permission for fast dormancy for RIL
+    chown system radio /sys/devices/virtual/sec/bamdmux/waketime
+
     # Permissions for gpio_keys
     chown system radio /sys/class/sec/sec_key/wakeup_keys
     chown system radio /sys/class/sec/sec_key/hall_irq_ctrl
