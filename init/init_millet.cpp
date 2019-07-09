@@ -79,7 +79,6 @@ void init_target_properties(void)
         property_override("ro.product.device", "millet3g");
         property_override("telephony.lteOnCdmaDevice", "0");
         property_override("telephony.lteOnGsmDevice", "0");
-        property_override("ro.telephony.ril_class", "SamsungMSM8226RIL");
     }
     else if (bootloader.find("T335XX") == 0) {
         /* milletltexx */
@@ -90,9 +89,8 @@ void init_target_properties(void)
         property_override("ro.product.device", "milletlte");
         property_override("telephony.lteOnGsmDevice", "1");
         property_override("ro.telephony.default_network", "10");
-        property_override("ro.telephony.ril_class", "SamsungMSM8226RIL");
     } else if (bootloader.find("T337T") == 0) {
-        /* milletltexx */
+        /* milletltetmo */
 		property_override("ro.build.fingerprint", "samsung/milletltetmo/milletltetmo:5.1.1/LMY47X/T337TUVS1CPL1:user/release-keys");
 		property_override("ro.build.description", "milletltetmo-user 5.1.1 LMY47X T337TUVS1CPL1 release-keys");
         property_override("ro.product.model", "SM-T337T");
@@ -100,10 +98,7 @@ void init_target_properties(void)
         property_override("ro.product.device", "milletltetmo");
         property_override("telephony.lteOnGsmDevice", "1");
         property_override("ro.telephony.default_network", "9");
-        property_override("ro.telephony.ril_class", "SamsungMSM8226RIL");
-		property_override("rild.libpath", "/system/lib/libsec-ril.so");
 		property_override("ril.subscription.types", "NV,RUIM");
-		property_override("ro.telephony.ril_class", "-d /dev/smd0");
 		property_override("DEVICE_PROVISIONED", "1");
     } else {
         /* milletwifi */
