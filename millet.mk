@@ -104,6 +104,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.software.midi.xml \
     frameworks/native/data/etc/android.hardware.hdmi.cec.xml:$(TARGET_OUT_ETC)/system/etc/permissions/android.hardware.hdmi.cec.xml \
     frameworks/native/data/etc/com.nxp.mifare.xml:$(TARGET_OUT_ETC)/system/etc/permissions/com.nxp.mifare.xml \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:system/etc/permissions/android.hardware.consumerir.xml \
     frameworks/native/data/etc/tablet_core_hardware.xml:$(TARGET_OUT_ETC)/system/etc/permissions/tablet_core_hardware.xml
 
 # Radio
