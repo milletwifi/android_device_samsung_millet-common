@@ -103,7 +103,7 @@ void init_target_properties(void)
         property_override("ro.product.name", "milletltetmo");
         property_override("ro.product.device", "milletltetmo");
         property_override("ro.carrier", "wifi-only");
-        property_override("ro.radio.noril", "1"); */
+        property_override("ro.radio.noril", "1");
         /* RIL Disable Temporarily */
 		/* property_override("telephony.lteOnGsmDevice", "1");
         property_override("ro.telephony.default_network", "9");
