@@ -5,3 +5,4 @@ allow sdcardd unlabeled:dir setattr;
 allow sdcardd unlabeled:file getattr;
 allow sdcardd unlabeled:file { read write };
 allow sdcardd unlabeled:file open;
+allow sdcardd unlabeled:dir write;
