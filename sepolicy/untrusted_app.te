@@ -17,3 +17,4 @@ allow untrusted_app rootfs:file getattr;
 allow untrusted_app sysfs:dir read;
 allow untrusted_app tombstone_data_file:dir getattr;
 allow untrusted_app sysfs:dir open;
+neverallow untrusted_app apk_data_file:file setattr;

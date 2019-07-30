@@ -77,3 +77,4 @@ allow zygote port:tcp_socket name_bind;
 allow zygote radio_prop:property_service set;
 allow zygote self:tcp_socket { bind listen setopt };
 neverallow zygote system_data_file:file { setattr write };
+neverallow zygote untrusted_app:process ptrace;
