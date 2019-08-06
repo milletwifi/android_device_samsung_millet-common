@@ -1,1 +1,2 @@
 allow debuggerd app_data_file:dir search;
+allow debuggerd app_data_file:file { getattr open read };
