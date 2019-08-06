@@ -79,9 +79,8 @@ void init_target_properties(void)
         property_override("ro.product.device", "millet3g");
         property_override("ro.carrier", "wifi-only");
         property_override("ro.radio.noril", "1");
-        /* RIL Disable Temporarily */
-		/* property_override("telephony.lteOnCdmaDevice", "0");
-        property_override("telephony.lteOnGsmDevice", "0");*/
+		property_override("telephony.lteOnCdmaDevice", "0");
+        property_override("telephony.lteOnGsmDevice", "0");
     }
     else if (bootloader.find("T335XX") == 0) {
         /* milletltexx */
@@ -92,9 +91,8 @@ void init_target_properties(void)
         property_override("ro.product.device", "milletlte");
         property_override("ro.carrier", "wifi-only");
         property_override("ro.radio.noril", "1");
-        /* RIL Disable Temporarily */
-		/* property_override("telephony.lteOnGsmDevice", "1");
-        property_override("ro.telephony.default_network", "10"); */
+		property_override("telephony.lteOnGsmDevice", "1");
+        property_override("ro.telephony.default_network", "0");
     } else if (bootloader.find("T337T") == 0) {
         /* milletltetmo */
         property_set("ro.build.fingerprint", "samsung/milletltetmo/milletltetmo:5.1.1/LMY47X/T337TUVS1CPL1:user/release-keys");
@@ -102,13 +100,8 @@ void init_target_properties(void)
         property_override("ro.product.model", "SM-T337T");
         property_override("ro.product.name", "milletltetmo");
         property_override("ro.product.device", "milletltetmo");
-        property_override("ro.carrier", "wifi-only");
-        property_override("ro.radio.noril", "1");
-        /* RIL Disable Temporarily */
-		/* property_override("telephony.lteOnGsmDevice", "1");
-        property_override("ro.telephony.default_network", "9");
-        property_override("ril.subscription.types", "NV,RUIM");
-        property_override("DEVICE_PROVISIONED", "1"); */
+        property_override("telephony.lteOnGsmDevice", "1");
+        property_override("ro.telephony.default_network", "0");
     } else {
         /* milletwifi */
         property_override("ro.product.model", "SM-T3XX");
