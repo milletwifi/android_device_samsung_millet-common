@@ -77,8 +77,6 @@ void init_target_properties(void)
         property_override("ro.product.model", "SM-T331");
         property_override("ro.product.name", "millet3g");
         property_override("ro.product.device", "millet3g");
-        property_override("ro.carrier", "wifi-only");
-        property_override("ro.radio.noril", "1");
 		property_override("telephony.lteOnCdmaDevice", "0");
         property_override("telephony.lteOnGsmDevice", "0");
     }
@@ -89,8 +87,6 @@ void init_target_properties(void)
         property_override("ro.product.model", "SM-T335");
         property_override("ro.product.name", "milletlte");
         property_override("ro.product.device", "milletlte");
-        property_override("ro.carrier", "wifi-only");
-        property_override("ro.radio.noril", "1");
 		property_override("telephony.lteOnGsmDevice", "1");
         property_override("ro.telephony.default_network", "0");
     } else if (bootloader.find("T337T") == 0) {
