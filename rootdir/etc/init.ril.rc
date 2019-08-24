@@ -25,6 +25,12 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+on post-fs-data
+    chown radio radio /sys/module/f_rmnet/parameters/rmnet_ctl_ch
+    chmod 666 /sys/module/f_rmnet/parameters/rmnet_ctl_ch
+    chown radio radio /sys/module/rmnet/parameters/rmnet_ctl_ch
+    chmod 666 /sys/module/rmnet/parameters/rmnet_ctl_ch
+
 on boot
     start qmuxd
     start rmt_storage
