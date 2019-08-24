@@ -8,7 +8,7 @@ extern "C" {
     ALOGE("%s: E", __FUNCTION__);
     if (strcmp("ro.revision", key) == 0) {
       ALOGE("%s: ro.revision was called!", __FUNCTION__);
-      strcpy(value, "2");
+      strcpy(value, "7");
       return 3;
     }
     ALOGE("%s: called other property: %s", __FUNCTION__, key);
