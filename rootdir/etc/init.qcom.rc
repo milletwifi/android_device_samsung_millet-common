@@ -140,6 +140,10 @@ on post-fs-data
     mkdir /data/misc/location/quipc 0770 system gps
     mkdir /data/misc/location/xtwifi 0770 gps gps
 
+    # Allow QMUX daemon to assign port open wait time
+    chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+    chmod 666 /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+    
     # Create directory from IMS services
     mkdir /data/shared 0755
     chown system system /data/shared
